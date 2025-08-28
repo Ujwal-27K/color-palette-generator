@@ -5,11 +5,11 @@
   "type": "module",
   "description": "A modern color palette generator with Colormind API integration",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "vercel --prod"
+},
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -25,6 +25,6 @@
     "vite": "^4.4.5"
   },
   "keywords": ["react", "color-palette", "generator", "colormind", "api", "responsive"],
-  "author": "Your Name",
+  "author": "Ujwal Khairnar",
   "license": "MIT"
 }
