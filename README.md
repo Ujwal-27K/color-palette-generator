@@ -103,6 +103,27 @@ A modern, responsive **color palette generator** web application that harnesses 
 
 ### 🏗️ **Project Architecture**
 
+📁 Project Structure
+├── 🎯 src/
+│ ├── 🏠 App.jsx (Main application & state management)
+│ ├── 🎨 App.css (Global application styles)
+│ ├── 🌐 index.css (CSS reset & design system)
+│ ├── ⚡ main.jsx (React entry point)
+│ │
+│ ├── 🧩 components/
+│ │ ├── 🏠 Header.jsx (Title & AI model selector)
+│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)
+│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)
+│ │ ├── 📖 Instructions.jsx (User guide & help section)
+│ │ ├── 🔔 Notification.jsx (Success/error message system)
+│ │ └── 🎨 *.css (Component-specific styles)
+│ │
+│ └── 🛠️ utils/
+│ └── 🎨 colorUtils.js (Color operations & API integration)
+│
+├── 📦 package.json (Dependencies & scripts)
+├── ⚡ vite.config.js (Build configuration)
+└── 🌐 index.html (HTML template)
 
 ---
 
