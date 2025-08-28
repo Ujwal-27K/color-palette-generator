@@ -103,28 +103,28 @@ A modern, responsive **color palette generator** web application that harnesses 
 
 ### 🏗️ **Project Architecture**
 
-📁 Project Structure\
-├── 🎯 src/\
-│ ├── 🏠 App.jsx (Main application & state management)\
-│ ├── 🎨 App.css (Global application styles)\
-│ ├── 🌐 index.css (CSS reset & design system)\
-│ ├── ⚡ main.jsx (React entry point)\
-│ │\
-│ ├── 🧩 components/\
-│ │ ├── 🏠 Header.jsx (Title & AI model selector)\
-│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)\
-│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)\
-│ │ ├── 📖 Instructions.jsx (User guide & help section)\
-│ │ ├── 🔔 Notification.jsx (Success/error message system)\
-│ │ └── 🎨 *.css (Component-specific styles)\
-│ │\
-│ └── 🛠️ utils/\
-│ └── 🎨 colorUtils.js (Color operations & API integration)\
-│\
-├── 📦 package.json (Dependencies & scripts)\
-├── ⚡ vite.config.js (Build configuration)\
-└── 🌐 index.html (HTML template)\
-\
+📁 Project Structure
+├── 🎯 src/
+│ ├── 🏠 App.jsx (Main application & state management)
+│ ├── 🎨 App.css (Global application styles)
+│ ├── 🌐 index.css (CSS reset & design system)
+│ ├── ⚡ main.jsx (React entry point)
+│ │
+│ ├── 🧩 components/
+│ │ ├── 🏠 Header.jsx (Title & AI model selector)
+│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)
+│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)
+│ │ ├── 📖 Instructions.jsx (User guide & help section)
+│ │ ├── 🔔 Notification.jsx (Success/error message system)
+│ │ └── 🎨 *.css (Component-specific styles)
+│ │
+│ └── 🛠️ utils/
+│ └── 🎨 colorUtils.js (Color operations & API integration)
+│
+├── 📦 package.json (Dependencies & scripts)
+├── ⚡ vite.config.js (Build configuration)
+└── 🌐 index.html (HTML template)
+
 ---
 
 ## 🚀 Getting Started
@@ -142,20 +142,20 @@ Make sure you have the following installed on your machine:
 
 Follow these simple steps to get your development environment running:
 
-1️⃣ Clone the repository\
-git clone https://github.com/Ujwal-27K/color-palette-generator.git \
+1️⃣ Clone the repository
+git clone https://github.com/Ujwal-27K/color-palette-generator.git 
 
-2️⃣ Navigate to project directory\
-cd color-palette-generator\
+2️⃣ Navigate to project directory
+cd color-palette-generator
 
-3️⃣ Install dependencies\
-npm install\
+3️⃣ Install dependencies
+npm install
 
-4️⃣ Start development server \
-npm run dev\
-\
-5️⃣ Open your browser\ 
-Navigate to http://localhost:5173 \
+4️⃣ Start development server 
+npm run dev
+
+5️⃣ Open your browser
+Navigate to http://localhost:5173 
 
 ### 🎯 **Available Scripts**
 
@@ -205,6 +205,33 @@ Choose from different AI models for varied color generation styles:
 
 This project integrates seamlessly with the [Colormind API](http://colormind.io/api-access/) for intelligent color generation:
 
+/**
+
+🎨 Example API Integration
+
+Demonstrates how we fetch AI-generated color palettes
+*/
+const fetchColormindPalette = async (model = 'default', input = null) => {
+try {
+const response = await fetch('http://colormind.io/api/', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+'Accept': 'application/json'
+},
+body: JSON.stringify({
+model: model, // Choose AI model
+input: input // Optional: lock specific colors
+})
+});
+
+const data = await response.json();
+return data.result.map(rgb => rgbToHex(rgb));
+} catch (error) {
+console.warn('API failed, using fallback colors');
+return generateRandomPalette(); // Graceful fallback
+}
+};
 
 ### ✨ **API Features**
 
@@ -353,6 +380,9 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 
 If you encounter CORS issues in production:
 
+// Temporary workaround using CORS proxy
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+const response = await fetch(CORS_PROXY + 'http://colormind.io/api/', options);
 
 **Better solution**: Deploy your own CORS proxy or use server-side API calls.
 </details>
@@ -362,6 +392,8 @@ If you encounter CORS issues in production:
 
 The Clipboard API requires HTTPS or localhost. For HTTP sites:
 
+// Fallback method is automatically used
+const success = await copyToClipboard(text);
 
 The app includes automatic fallback for older browsers and HTTP contexts.
 </details>
@@ -370,6 +402,13 @@ The app includes automatic fallback for older browsers and HTTP contexts.
 <summary><strong>🔄 Build Issues</strong></summary>
 
 If you encounter build problems:
+
+Clear cache and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+Clear Vite cache
+npm run dev -- --force
 
 </details>
 
@@ -386,6 +425,15 @@ If you encounter build problems:
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for complete details.
 
+MIT License - Copyright (c) 2025 Ujwal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, subject to the following conditions:
+
+[Full license text in LICENSE file]
 
 ---
 
