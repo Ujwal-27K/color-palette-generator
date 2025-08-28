@@ -103,27 +103,33 @@ A modern, responsive **color palette generator** web application that harnesses 
 
 ### 🏗️ **Project Architecture**
 
-📁 Project Structure
-├── 🎯 src/
-│ ├── 🏠 App.jsx (Main application & state management)
-│ ├── 🎨 App.css (Global application styles)
-│ ├── 🌐 index.css (CSS reset & design system)
-│ ├── ⚡ main.jsx (React entry point)
-│ │
-│ ├── 🧩 components/
-│ │ ├── 🏠 Header.jsx (Title & AI model selector)
-│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)
-│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)
-│ │ ├── 📖 Instructions.jsx (User guide & help section)
-│ │ ├── 🔔 Notification.jsx (Success/error message system)
-│ │ └── 🎨 *.css (Component-specific styles)
-│ │
-│ └── 🛠️ utils/
-│ └── 🎨 colorUtils.js (Color operations & API integration)
-│
-├── 📦 package.json (Dependencies & scripts)
-├── ⚡ vite.config.js (Build configuration)
-└── 🌐 index.html (HTML template)
+### 🏗️ **Project Architecture**
+
+**📁 Root Directory:**
+- `public/` - Static assets
+  - `index.html` - HTML template
+  - `vite.svg` - Vite logo
+
+**📁 Source Code (`src/`):**
+- `components/` - React Components
+  - `Header.jsx` & `Header.css` - Title & AI model selector
+  - `ColorPalette.jsx` & `ColorPalette.css` - Main color display
+  - `Controls.jsx` & `Controls.css` - Action buttons
+  - `Instructions.jsx` & `Instructions.css` - User guide
+  - `Notification.jsx` & `Notification.css` - Message system
+
+- `utils/` - Utility Functions
+  - `colorUtils.js` - Color operations & API integration
+
+- `App.jsx` - Main application & state management
+- `App.css` - Global application styles  
+- `index.css` - CSS reset & design system
+- `main.jsx` - React entry point
+
+**📁 Configuration:**
+- `package.json` - Dependencies & scripts
+- `vite.config.js` - Build configuration
+- `README.md` - Project documentation
 
 ---
 
