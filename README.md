@@ -104,27 +104,27 @@ A modern, responsive **color palette generator** web application that harnesses 
 ### 🏗️ **Project Architecture**
 
 📁 Project Structure\
-├── 🎯 src/
-│ ├── 🏠 App.jsx (Main application & state management)
-│ ├── 🎨 App.css (Global application styles)
-│ ├── 🌐 index.css (CSS reset & design system)
-│ ├── ⚡ main.jsx (React entry point)
-│ │
-│ ├── 🧩 components/
-│ │ ├── 🏠 Header.jsx (Title & AI model selector)
-│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)
-│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)
-│ │ ├── 📖 Instructions.jsx (User guide & help section)
-│ │ ├── 🔔 Notification.jsx (Success/error message system)
-│ │ └── 🎨 *.css (Component-specific styles)
-│ │
-│ └── 🛠️ utils/
-│ └── 🎨 colorUtils.js (Color operations & API integration)
-│
-├── 📦 package.json (Dependencies & scripts)
-├── ⚡ vite.config.js (Build configuration)
-└── 🌐 index.html (HTML template)
-
+├── 🎯 src/\
+│ ├── 🏠 App.jsx (Main application & state management)\
+│ ├── 🎨 App.css (Global application styles)\
+│ ├── 🌐 index.css (CSS reset & design system)\
+│ ├── ⚡ main.jsx (React entry point)\
+│ │\
+│ ├── 🧩 components/\
+│ │ ├── 🏠 Header.jsx (Title & AI model selector)\
+│ │ ├── 🎨 ColorPalette.jsx (Main color display & interactions)\
+│ │ ├── 🎮 Controls.jsx (Generate & copy action buttons)\
+│ │ ├── 📖 Instructions.jsx (User guide & help section)\
+│ │ ├── 🔔 Notification.jsx (Success/error message system)\
+│ │ └── 🎨 *.css (Component-specific styles)\
+│ │\
+│ └── 🛠️ utils/\
+│ └── 🎨 colorUtils.js (Color operations & API integration)\
+│\
+├── 📦 package.json (Dependencies & scripts)\
+├── ⚡ vite.config.js (Build configuration)\
+└── 🌐 index.html (HTML template)\
+\
 ---
 
 ## 🚀 Getting Started
@@ -142,9 +142,27 @@ Make sure you have the following installed on your machine:
 
 Follow these simple steps to get your development environment running:
 
+1️⃣ Clone the repository\
+git clone https://github.com/Ujwal-27K/color-palette-generator.git \
+
+2️⃣ Navigate to project directory\
+cd color-palette-generator\
+
+3️⃣ Install dependencies\
+npm install\
+
+4️⃣ Start development server \
+npm run dev\
+\
+5️⃣ Open your browser\ 
+Navigate to http://localhost:5173 \
 
 ### 🎯 **Available Scripts**
 
+npm run dev # 🚀 Start development server \
+npm run build # 📦 Build for production \
+npm run preview # 👀 Preview production build \
+npm run lint # 🧹 Run ESLint for code quality \
 
 ---
 
@@ -247,23 +265,16 @@ This project integrates seamlessly with the [Colormind API](http://colormind.io/
 
 Vercel provides the best experience for React applications:
 
+1️⃣ Install Vercel CLI\
+npm install -g vercel\
 
-### 🔗 **Alternative Deployment Options**
+2️⃣ Build your project\
+npm run build\
 
-<details>
-<summary><strong>🟢 Netlify Deployment</strong></summary>
+3️⃣ Deploy to Vercel\
+vercel --prod\
 
-</details>
-
-<details>
-<summary><strong>🟠 GitHub Pages</strong></summary>
-
-</details>
-
-<details>
-<summary><strong>🔵 Firebase Hosting</strong></summary>
-
-</details>
+4️⃣ Follow the prompts to configure your deployment
 
 ---
 
@@ -281,6 +292,21 @@ We love contributions from the community! Here's how you can help make this proj
 
 ### 🛠️ **Development Workflow**
 
+1️⃣ Fork the repository on GitHub
+2️⃣ Clone your fork
+git clone https://github.com/your-username/color-palette-generator.git
+
+3️⃣ Create a feature branch
+git checkout -b feature/amazing-new-feature
+
+4️⃣ Make your changes and commit
+git add .
+git commit -m "feat: add amazing new feature"
+
+5️⃣ Push to your fork
+git push origin feature/amazing-new-feature
+
+6️⃣ Create a Pull Request on GitHub
 
 ### 📝 **Commit Message Convention**
 
