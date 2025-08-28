@@ -209,33 +209,6 @@ Choose from different AI models for varied color generation styles:
 
 This project integrates seamlessly with the [Colormind API](http://colormind.io/api-access/) for intelligent color generation:
 
-/**
-
-🎨 Example API Integration
-
-Demonstrates how we fetch AI-generated color palettes
-*/
-const fetchColormindPalette = async (model = 'default', input = null) => {
-try {
-const response = await fetch('http://colormind.io/api/', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-'Accept': 'application/json'
-},
-body: JSON.stringify({
-model: model, // Choose AI model
-input: input // Optional: lock specific colors
-})
-});
-
-const data = await response.json();
-return data.result.map(rgb => rgbToHex(rgb));
-} catch (error) {
-console.warn('API failed, using fallback colors');
-return generateRandomPalette(); // Graceful fallback
-}
-};
 
 ### ✨ **API Features**
 
@@ -296,14 +269,14 @@ return generateRandomPalette(); // Graceful fallback
 
 Vercel provides the best experience for React applications:
 
-1️⃣ Install Vercel CLI\
-npm install -g vercel\
+1️⃣ Install Vercel CLI
+npm install -g vercel
 
-2️⃣ Build your project\
-npm run build\
+2️⃣ Build your project
+npm run build
 
-3️⃣ Deploy to Vercel\
-vercel --prod\
+3️⃣ Deploy to Vercel
+vercel --prod
 
 4️⃣ Follow the prompts to configure your deployment
 
