@@ -103,8 +103,6 @@ A modern, responsive **color palette generator** web application that harnesses 
 
 ### 🏗️ **Project Architecture**
 
-### 🏗️ **Project Architecture**
-
 **📁 Root Directory:**
 - `public/` - Static assets
   - `index.html` - HTML template
