@@ -14,7 +14,6 @@
 
 [🚀 Live Demo](https://color-palette-generator-git-main-ujwal-27ks-projects.vercel.app) • [📖 Documentation](#-features) • [🤝 Contributing](#-contributing) • [💻 GitHub](https://github.com/Ujwal-27K/color-palette-generator)
 
-![🎨Color Palette Generator](https://via.placeholder.com/800x400/667eea/ffffff?text=🎨+Color+Palette+Generator)
 
 </div>
 
