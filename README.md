@@ -103,7 +103,7 @@ A modern, responsive **color palette generator** web application that harnesses 
 
 ### 🏗️ **Project Architecture**
 
-📁 Project Structure
+📁 Project Structure\
 ├── 🎯 src/
 │ ├── 🏠 App.jsx (Main application & state management)
 │ ├── 🎨 App.css (Global application styles)
