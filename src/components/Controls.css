@@ -1,0 +1,183 @@
+/* Controls Component Styles */
+
+.controls {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Base button styles */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 3rem;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Primary button (Generate) */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  filter: brightness(1.05);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary.loading {
+  background: var(--gray-400);
+  pointer-events: none;
+}
+
+/* Secondary button (Copy All) */
+.btn-secondary {
+  background: var(--white);
+  color: var(--gray-700);
+  border: 2px solid var(--gray-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Button content */
+.btn-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.btn-text {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Loading spinner for buttons */
+.btn-spinner {
+  position: absolute;
+  right: var(--spacing-md);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Controls hint */
+.controls-hint {
+  text-align: center;
+}
+
+.hint-text {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.hint-text kbd {
+  background: var(--gray-100);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 1px 0 var(--gray-300);
+  font-family: inherit;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .controls-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9375rem;
+    min-height: 2.75rem;
+  }
+  
+  .btn-icon {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.75rem var(--spacing-md);
+    min-height: 2.5rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .btn-text {
+    font-size: 0.875rem;
+  }
+  
+  .btn-spinner {
+    right: 0.75rem;
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+  
+  .hint-text {
+    font-size: 0.75rem;
+  }
+  
+  .hint-text kbd {
+    padding: 0.0625rem 0.25rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* Button press animation */
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}

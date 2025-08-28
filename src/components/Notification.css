@@ -1,0 +1,132 @@
+/* Notification Component Styles */
+
+.notification {
+  position: fixed;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  z-index: 1000;
+  max-width: 400px;
+  min-width: 280px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  backdrop-filter: blur(10px);
+  transform: translateX(100%) translateX(var(--spacing-lg));
+  transition: all var(--transition-normal);
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid transparent;
+}
+
+/* Show state */
+.notification--show {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Notification content */
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.notification-icon {
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.notification-message {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Notification types */
+.notification--success {
+  background: rgba(16, 185, 129, 0.95);
+  color: white;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.notification--error {
+  background: rgba(239, 68, 68, 0.95);
+  color: white;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.notification--warning {
+  background: rgba(245, 158, 11, 0.95);
+  color: white;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.notification--info {
+  background: rgba(59, 130, 246, 0.95);
+  color: white;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Hover effects */
+.notification:hover {
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-xl), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+
+@media (max-width: 767px) {
+  .notification {
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    max-width: none;
+    min-width: auto;
+    width: auto;
+    transform: translateY(-100%);
+    border-radius: var(--radius-md);
+  }
+  
+  .notification--show {
+    transform: translateY(0);
+  }
+  
+  .notification:hover {
+    transform: translateY(-2px);
+  }
+  
+  .notification-content {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .notification-message {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    right: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .notification-message {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .notification {
+    transition: opacity 0.2s ease;
+  }
+  
+  .notification:hover {
+    transform: none;
+  }
+}

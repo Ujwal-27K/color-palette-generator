@@ -1,0 +1,200 @@
+/* Main App Styles - Responsive Color Palette Generator */
+
+.app {
+  min-height: 100vh;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Main container with responsive design */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-2xl);
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-out;
+  position: relative;
+}
+
+/* Main content area */
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+/* App footer */
+.app-footer {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--gray-200);
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
+
+.app-footer p {
+  margin-bottom: var(--spacing-xs);
+}
+
+.app-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.app-footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.app-footer kbd {
+  background: var(--gray-100);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 1px 0 var(--gray-300);
+}
+
+/* Responsive Design Breakpoints */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .app-container {
+    padding: var(--spacing-2xl) 3rem;
+  }
+  
+  .app-main {
+    gap: 2.5rem;
+  }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .app-container {
+    max-width: 960px;
+    padding: var(--spacing-2xl);
+  }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .app {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .app-container {
+    max-width: 720px;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+  }
+  
+  .app-main {
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Mobile Landscape (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .app {
+    padding: var(--spacing-sm);
+  }
+  
+  .app-container {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .app-main {
+    gap: var(--spacing-lg);
+  }
+  
+  .app-footer {
+    margin-top: var(--spacing-lg);
+    font-size: 0.8125rem;
+  }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+  .app {
+    padding: 0.5rem;
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+  
+  .app-container {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+  }
+  
+  .app-main {
+    gap: var(--spacing-md);
+  }
+  
+  .app-footer {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    font-size: 0.75rem;
+  }
+  
+  .app-footer p {
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Extra small screens (up to 400px) */
+@media (max-width: 400px) {
+  .app-container {
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+  }
+  
+  .app-main {
+    gap: var(--spacing-sm);
+  }
+}
+
+/* High DPI / Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .app-container {
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .app-container {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus improvements for keyboard navigation */
+.app:focus-within .app-container {
+  outline: 2px solid #667eea;
+  outline-offset: 4px;
+}
