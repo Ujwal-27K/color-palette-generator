@@ -297,7 +297,7 @@ We love contributions from the community! Here's how you can help make this proj
 
 1️⃣ Fork the repository on GitHub
 2️⃣ Clone your fork
-git clone https://github.com/your-username/color-palette-generator.git
+git clone https://github.com/Ujwal-27K/color-palette-generator.git
 
 3️⃣ Create a feature branch
 git checkout -b feature/amazing-new-feature
